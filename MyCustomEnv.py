@@ -29,7 +29,7 @@ class MyCustomEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
         self.kinematics_integrator = "euler"
 
         # Angle at which to fail the episode
-        self.theta_threshold_radians = 12 * 2 * math.pi / 360
+        self.theta_threshold_radians = 17 * 2 * math.pi / 360
         self.x_threshold = 2.4
 
         # Angle limit set to 2 * theta_threshold_radians so failing observation
