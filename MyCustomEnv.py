@@ -9,7 +9,7 @@ from gym.envs.classic_control import utils
 from gym.error import DependencyNotInstalled
 
 
-class CartPoleEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
+class MyCustomclass(gym.Env[np.ndarray, Union[int, np.ndarray]]):
     metadata = {
         "render_modes": ["human", "rgb_array"],
         "render_fps": 50,
