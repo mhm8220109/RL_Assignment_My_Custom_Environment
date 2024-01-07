@@ -9,9 +9,7 @@ from gym.envs.classic_control import utils
 from gym.error import DependencyNotInstalled
 
 
-class MyCustomEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
-   
-
+class CartPoleEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
     metadata = {
         "render_modes": ["human", "rgb_array"],
         "render_fps": 50,
@@ -98,7 +96,7 @@ class MyCustomEnv(gym.Env[np.ndarray, Union[int, np.ndarray]]):
         )
 
         if not terminated:
-            reward = 5.0
+            reward = 2.0
         elif self.steps_beyond_terminated is None:
             # Pole just fell!
             self.steps_beyond_terminated = 0
